@@ -24,7 +24,8 @@ const CartButtons = () => {
 };
 
 const Wrapper = styled.div`
-  display: grid;
+  display: grid;  
+  
   grid-template-columns: 1fr 1fr;
   align-items: center;
   width: 225px;
