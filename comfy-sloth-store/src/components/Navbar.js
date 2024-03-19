@@ -31,7 +31,9 @@ const Nav = () => {
             );
           })}
         </ul>
-        <CartButtons />
+        <CartButtonsContainer>
+          <CartButtons />
+        </CartButtonsContainer>
       </div>
     </NavContainer>
   );
@@ -42,7 +44,7 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-
+  
   .nav-center {
     width: 90vw;
     margin: 0 auto;
@@ -101,6 +103,14 @@ const NavContainer = styled.nav`
     .cart-btn-wrapper {
       display: grid;
     }
+  }
+`;
+
+const CartButtonsContainer = styled.div`
+  display: none;
+  
+  @media (min-width: 992px) {
+    display: grid;
   }
 `;
 
