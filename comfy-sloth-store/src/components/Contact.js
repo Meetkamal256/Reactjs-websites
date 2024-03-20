@@ -5,18 +5,23 @@ const Contact = () => {
   return (
     <Wrapper>
       <div className="section-center">
-        <h2>Join our newsletter and get 20% off</h2>
+        <h3>Join our newsletter and get 20% off</h3>
         <div className="content">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sint
             voluptas ipsum id iusto voluptatum deleniti cumque odio officia
             molestias.
           </p>
-          <form className="contact-form">
+          <form
+            className="contact-form"
+            action="https://formspree.io/f/xnqebboo"
+            method="POST"
+          >
             <input
               type="email"
               className="form-input"
               placeholder="enter email"
+              name="_replyto"
             />
             <button className="submit-btn">Subscribe</button>
           </form>
@@ -48,6 +53,7 @@ const Wrapper = styled.section`
     padding: 0.5rem 1rem;
     border: 2px solid var(--clr-black);
   }
+
   .form-input {
     border-right: none;
     color: var(--clr-grey-3);
@@ -85,6 +91,7 @@ const Wrapper = styled.section`
       margin-bottom: 0;
     }
   }
+
   @media (min-width: 1280px) {
     padding: 15rem 0;
   }
